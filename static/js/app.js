@@ -20,6 +20,18 @@
 			controller: 'IwantController',
 			template: '/static/js/views/iwant.html'
 		},
+		'/send-order': {
+			controller: 'SendOrderController',
+			template: '/static/js/views/send-order.html'
+		},
+		'/order-choose': {
+			controller: 'OrderChooseController',
+			template: '/static/js/views/order-choose.html'
+		},
+		'/shop-detail': {
+			controller: 'ShopDetailController',
+			template: '/static/js/views/shop-detail.html'
+		},
 		'/mine': {
 			controller: 'MineController',
 			template: '/static/js/views/mine.html'
