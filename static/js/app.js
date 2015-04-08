@@ -35,6 +35,30 @@
 		'/mine': {
 			controller: 'MineController',
 			template: '/static/js/views/mine.html'
+		},
+		'/wait-order': {
+			controller: 'WaitOrderController',
+			template: '/static/js/views/wait-order.html'
+		},
+		'/unpay-order': {
+			controller: 'UnpayOrderController',
+			template: '/static/js/views/unpay-order.html'
+		},
+		'/running-order': {
+			controller: 'RunningOrderController',
+			template: '/static/js/views/running-order.html'
+		},
+		'/remark-order': {
+			controller: 'RemarkOrderController',
+			template: '/static/js/views/remark-order.html'
+		},
+		'/all-order': {
+			controller: 'AllOrderController',
+			template: '/static/js/views/all-order.html'
+		},
+		'/chat': {
+			controller: 'ChatController',
+			template: '/static/js/views/chat.html'
 		}
 	};
 

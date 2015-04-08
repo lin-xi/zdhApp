@@ -87,6 +87,7 @@ a{text-decoration: none; color: #323232;}
 	position: relative;
 }
 .app-body{
+	width: 100%;
 	padding-bottom: 50px;
 	overflow: hidden;
 	overflow-y: auto; 
@@ -127,7 +128,7 @@ a{text-decoration: none; color: #323232;}
 .pt-5{ padding-top: 5px;}
 .pt-40{ padding-top: 40px;}
 .p-5{ padding: 5px;}
-.p-10{ padding: 5px;}
+.p-10{ padding: 10px;}
 .mt-5{ margin-top: 5px;}
 .mb-5{ margin-bottom: 5px;}
 .mt-10{ margin-top: 10px;}
@@ -419,7 +420,7 @@ input[type='range']::-webkit-slider-thumb {
 .iwant #pan-list{
 	position: absolute;
 	left: 60%;
-	top: 20px;
+	top: 0px;
 	width: 30%;
 	border: 1px #ddd solid;
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#DDDDDD), color-stop(0.1, hsl(0,0%,90%)), color-stop(0.5, #EEEEEE),  color-stop(0.9, hsl(0,0%,90%)), to(#DDDDDD)); 
@@ -704,6 +705,8 @@ input[type='range']::-webkit-slider-thumb {
 .user-avatar{
 	border-radius: 100%;
 	border: 3px #888 solid;
+	cursor: pointer;
+	vertical-align: middle;
 }
 .left-msg{
 	display: inline-block;
@@ -802,6 +805,98 @@ input[type='range']::-webkit-slider-thumb {
 	line-height: 40px;
 	text-align: right;
 }
+
+.order .top{
+	background-color: #fff;
+}
+.order .top i, .order .top a{
+	color: #888;
+}
+.order .top .active{
+	background-color: #ECEDF2;
+}
+.order .top .active i, .order .top .active a{
+	color: #000;
+}
+.order .order-item{
+	background-color: #fff;
+	margin: 5px;
+	height: 80px;
+	border-radius: 4px;
+}
+.order .order-item i{
+	font-size: 20px;
+	color: #888;
+}
+.order .order-item .title{
+	font-size: 16px;
+}
+.order .order-item code{
+	font-size: 14px;
+	background-color: #f0f0f0;
+}
+
+#editor{
+	border: none;
+	height: 32px;
+	line-height: 32px;
+	padding-left: 5px;
+	border-radius: 4px;
+	margin-top: 3px;
+	background-color: #f0f0f0;
+}
+
+.chat-list{}
+.chat-list .send-msg{
+	float: right;
+	position: relative;
+	clear: both;
+	margin: 5px;
+}
+.chat-list .recv-msg{
+	float: right;
+	position: relative;
+	clear: both;
+}
+
+.chat-list .send-msg .msg-holder, .chat-list .recv-msg .msg-holder{
+	border-radius: 4px;
+	background-color: #fff;
+	padding: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+.chat-list .send-msg .msg-holder{
+	margin-right: 20px;
+}
+.chat-list .recv-msg .msg-holder{
+	margin-left: 20px;
+}
+.chat-list .send-msg .msg-holder:before{
+	position: absolute;
+	content: " ";
+	width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid #fff;
+    border-bottom: 10px solid transparent;
+    right: -12px;
+    top: 10px;
+}
+.chat-list .recv-msg .msg-holder:before{
+	position: absolute;
+	content: " ";
+	width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid #fff;
+    border-bottom: 10px solid transparent;
+    right: -12px;
+    top: 20px;
+}
+
+
 
 .wifi-symbol {
  	display: none;
