@@ -5,4 +5,11 @@ app.controller('ShopDetailController', function(){
 	}
 	$('.app-body').height(wh);
 	
+
+	new Swiper('.swiper-container', {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
 });

@@ -15,7 +15,12 @@ app.controller('NearbyController', function(){
 
 
 	var marker = new BMap.Marker(point);  // 创建标注
-	map.addOverlay(marker);      
+	map.addOverlay(marker);  
 
+
+	new Swiper('.sub-cat', {
+        spaceBetween: 10,
+        slidesPerView: 'auto'
+    });
 	
 });

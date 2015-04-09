@@ -257,35 +257,32 @@ input[type='range']::-webkit-slider-thumb {
 	width: 100%;
 	height: 300px;
 }
-.map-tool-bar{
-	position: absolute;
-	width: 100px;
-	height: 27px;
-	text-align: center;
-	left: 50%; margin-left: -50px;
-	bottom: 2px;
-	font-size: 0;
-	border-radius: 10px;
-	border: 1px solid #AFB0B3;
+
+.nearby.catalog .sub-cat{
+	height: 30px; 
+	line-height: 30px;	
+	background-color: #fff;
+	width: 100%;
+	overflow: hidden;
 }
-.map-tool-bar a{
-	width: 50%;
-	display: inline-block;
-	background-color: #C6D9F1;
-	font-size: 24px;
-	cursor: pointer;
-	vertical-align: middle;
-	color: #444;
-}
-.map-tool-bar a:hover{
+.nearby.catalog .sub-cat{
+	height: 30px; 
+	line-height: 30px;	
 	background-color: #fff;
 }
-.map-tool-bar a:first-child{
-	border-radius: 10px 0 0 10px;
+.nearby.catalog .sub-cat .sub-cat-item{
+	float: left; width: 80px; text-align: center;
 }
-.map-tool-bar a:last-child{
-	border-radius: 0 10px 10px 0;
+.nearby.catalog .sub-cat .sub-cat-item i{
+	margin-right: 2px; color: #666;
 }
+.nearby.catalog .sub-cat .sub-cat-item.active{
+	background-color: #ECEDF2;
+}
+.nearby.catalog .sub-cat .sub-cat-item.active i{
+	color: #000;
+}
+
 
 #svgContainer{
 	width: 100%;
@@ -298,6 +295,46 @@ input[type='range']::-webkit-slider-thumb {
 	margin-bottom: 5px;
 	text-indent: 5px;
 	cursor: pointer;
+}
+
+.catalog .sub-cat{
+	height: 30px; 
+	line-height: 30px;	
+	background-color: #fff;
+	width: 100%;
+	overflow: hidden;
+}
+.catalog .sub-cat{
+	height: 30px; 
+	line-height: 30px;	
+	background-color: #fff;
+}
+.catalog .sub-cat .sub-cat-item{
+	float: left; width: 80px; text-align: center;
+}
+.catalog .sub-cat .sub-cat-item.active{
+	background-color: #f5f5f5;
+}
+
+.catalog .shop-item{
+	margin: 10px;
+	border-radius: 4px;
+	background-color: #fff;
+}
+.catalog .shop-item img{
+	border-radius: 4px;
+	margin-top: 5px;
+}
+.catalog .shop-item .name code{
+	font-size: 12px;
+	padding: 2px 8px;
+	background-color: #FE963B;
+}
+.catalog .shop-item .level code{
+	font-size: 12px;
+	padding: 2px 8px;
+	background-color: #f0f0f0;
+	margin-right: 5px;
 }
 
 .iwant{
@@ -752,7 +789,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .mine .top{
-	background-color: #fff;
+	background: linear-gradient(141deg, #c7e7f7, #30e0b2);
 	height: 120px;
 }
 .mine .avatar{

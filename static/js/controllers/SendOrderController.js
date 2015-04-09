@@ -27,10 +27,12 @@ app.controller('SendOrderController', function(){
 
 			setTimeout(function(){
 				app.redirect('/order-choose')
-			}, 1000);
+			}, 2000);
 		}
 	}
 
-	increase();
+	setTimeout(function(){
+		increase();
+	}, 2000)
 		
 });

@@ -28,10 +28,6 @@
 			controller: 'OrderChooseController',
 			template: '/static/js/views/order-choose.html'
 		},
-		'/shop-detail': {
-			controller: 'ShopDetailController',
-			template: '/static/js/views/shop-detail.html'
-		},
 		'/mine': {
 			controller: 'MineController',
 			template: '/static/js/views/mine.html'
@@ -59,7 +55,28 @@
 		'/chat': {
 			controller: 'ChatController',
 			template: '/static/js/views/chat.html'
-		}
+		},
+		'/cat-food': {
+			controller: 'CatFoodController',
+			template: '/static/js/views/cat-food.html'
+		},
+		'/shop-detail': {
+			controller: 'ShopDetailController',
+			template: '/static/js/views/shop-detail.html'
+		},
+		'/shop-detail-ghlp': {
+			controller: 'ShopDetailController',
+			template: '/static/js/views/shop-detail-ghlp.html'
+		},
+		'/shop-detail-qjn': {
+			controller: 'ShopDetailController',
+			template: '/static/js/views/shop-detail-qjn.html'
+		},
+		'/shop-detail-dn': {
+			controller: 'ShopDetailController',
+			template: '/static/js/views/shop-detail-dn.html'
+		},
+
 	};
 
 	app.on('pathChange', function(path){
