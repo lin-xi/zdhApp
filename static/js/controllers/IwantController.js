@@ -13,11 +13,11 @@ app.controller('IwantController', function(){
 	$('#order-view').height(wh);
 
 
-	$.get('/static/data/iwant-data.json', function(result){
+	$.get('/static/data/iwant-data.json?t='+ new Date().getTime(), function(result){
+		result = JSON.parse(result);
 		data = result.data;
 		setUp();
-
-	}, 'json');
+	});
 
 	function setUp(){
 		$('#pan-text1').addClass('active');

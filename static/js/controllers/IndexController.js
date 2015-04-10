@@ -8,4 +8,8 @@ app.controller('IndexController', function(){
         autoplayDisableOnInteraction: false
     });
 
+
+	$('.search-box input').on('focus', function(){
+
+	});
 });
