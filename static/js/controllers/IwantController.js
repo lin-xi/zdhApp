@@ -13,8 +13,7 @@ app.controller('IwantController', function(){
 	$('#order-view').height(wh);
 
 
-	$.get('/static/data/iwant-data.json?t='+ new Date().getTime(), function(result){
-		result = JSON.parse(result);
+	$.getJSON('static/data/iwant-data.json?t='+ new Date().getTime(), function(result){
 		data = result.data;
 		setUp();
 	});
@@ -113,7 +112,7 @@ app.controller('IwantController', function(){
 
 			var idx = cur.attr('index');
 			var tpl = list[idx].template;
-			$.get('/static/js/views/template/'+ tpl + '?t=' + new Date(), function(text){
+			$.get('static/js/views/template/'+ tpl + '?t=' + new Date(), function(text){
 				ov.html(text);
 
 				$('#orderOk').on('click', function(){

@@ -36,7 +36,7 @@ app.controller('ChatController', function(){
 	}
 
 	function receiveMessage(){
-		$('<div class="recv-msg"><span class="msg-holder">'+ msg +'</span><img class="user-avatar" width="60" height="60px" src="/static/images/shop/huoguo4.png"/></div>').appendTo(cl);
+		$('<div class="recv-msg"><span class="msg-holder">'+ msg +'</span><img class="user-avatar" width="60" height="60px" src="static/images/shop/huoguo4.png"/></div>').appendTo(cl);
 	}
 
 

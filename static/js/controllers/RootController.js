@@ -1,4 +1,8 @@
 app.controller('RootController', function(){
-	// app.redirect('/index')
+
+	var wh = $(window).height();
+	$('#view').height(wh);
+
+	app.redirect('/index');
 	
 });

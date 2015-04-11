@@ -8,6 +8,7 @@ html, body{
 }
 body{
 	background-color: #ecedf2;
+	overflow-x: hidden; 
 }
 a{text-decoration: none; color: #323232;}
 .text-right{text-align: right;}
@@ -19,8 +20,6 @@ a{text-decoration: none; color: #323232;}
 	box-sizing: border-box;
 }
 .container {
-    padding-right: 5px;
-    padding-left: 5px;
     margin-right: auto;
     margin-left: auto
 }
@@ -67,40 +66,41 @@ a{text-decoration: none; color: #323232;}
 .offset-1{margin-left: 8.33333333%;}
 .offset-0{margin-left: 0;}
 
+#view {position: relative; width: 100%; height: 100%;
+	overflow: hidden;
+}
 .app-box{
 	width: 100%;
+	height: 100%;
 	position: relative;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
 }
 .app-topbar{
-	background-color: #2586EE;
+	background-color: #05BFF4;
 	height: 40px; 
 	line-height: 40px;
 }
 .app-topbar i{
-	font-size: 22px;
-	margin: 0 5px;
+	font-size: 20px;
+	margin-left: 5px;
 	cursor: pointer;
 }
-.app-head{
-	height: 156px;
-	background-color: #fff;
-	position: relative;
-	overflow: hidden;
-}
+
 .app-body{
 	width: 100%;
-	padding-bottom: 50px;
-	overflow: hidden;
+	overflow-x: hidden;
 	overflow-y: auto; 
+	-webkit-box-flex: 1;
+}
+.app-body::-webkit-scrollbar { 
+    display: none; 
 }
 .app-foot{
-	position: absolute;
-	bottom: 0; left: 0;
 	height: 40px; 
 	width: 100%;
 	line-height: 40px;
 	background-color: #fff;
-	z-index: 100;
 }
 .app-foot .active{
 	background-color: #05C3F9;
@@ -112,6 +112,7 @@ a{text-decoration: none; color: #323232;}
 	color: #FFF;
 }
 
+
 .panel .head{
 	padding: 6px 5px;
 }
@@ -119,7 +120,7 @@ a{text-decoration: none; color: #323232;}
 	position: relative;
 }
 
-#view { position: relative;}
+
 .card{
 	height: 100px;
 	background-color: #fff;
@@ -244,6 +245,12 @@ input[type='range']::-webkit-slider-thumb {
 	color: #888;
 }
 
+.index-head{
+	height: 156px;
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+}
 .index .banner-slide{width: 100%; height: 180px;}
 .index .avatar{position: absolute; left: 10px; top:10px; z-index: 3}
 .index .avatar img{border-radius: 100%;}
@@ -256,7 +263,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 .index .search-box input{width: 90%; height: 35px; 
 	text-indent: 30px;
-	background: url(/static/images/zdh.png) 99% center no-repeat #fff;
+	background: url(../images/zdh.png) 99% center no-repeat #fff;
 }
 .index .search-box .at{position: absolute; top: 5px; left: 5%; padding-left: 6px; font-size: 16px;}
 
@@ -357,29 +364,29 @@ input[type='range']::-webkit-slider-thumb {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 640px;
+	width: 100%;
 	-webkit-transition-duration: 1s;
 	overflow: hidden;
 }
 .iwant #pan-wrap #pan{
 	position: absolute;
-	left: -250px;
+	left: -120px;
 	top: 50%;
-	margin-top: -250px;
+	margin-top: -120px;
 	z-index: 20;
 	-webkit-transition-duration: 1s;
 }
 .iwant #pan-wrap #pan .pan-text{
 	position: absolute;
 	left: 0px;
-	top:0;
-	width: 500px; height: 500px;
+	top: 0;
+	width: 240px; height: 240px;
 }
 #pan-text1, #pan-text2, #pan-text3, #pan-text4, #pan-text5, #pan-text6, #pan-text7, #pan-text8, #pan-text9, #pan-text10{
 	position: absolute;
-	left: 250px;
-	font-size: 30px;
-	-webkit-transform-origin: 0 250px;
+	left: 120px;
+	font-size: 14px;
+	-webkit-transform-origin: 0 120px;
 	text-shadow: hsla(0,0%,40%,.5) 0 -1px 0, hsla(0,0%,100%,.6) 0 2px 1px;
 }
 #pan-text1.active, #pan-text2.active, #pan-text3.active, #pan-text4.active, #pan-text5.active, 
@@ -391,8 +398,8 @@ input[type='range']::-webkit-slider-thumb {
 #pan-text6 .pan-text-inner, #pan-text7 .pan-text-inner, #pan-text8 .pan-text-inner, #pan-text9 .pan-text-inner, #pan-text10 .pan-text-inner{
 	-webkit-transform: rotate(-90deg);
 	position: absolute;
-	left: -100px;
-	width: 200px;
+	left: -60px;
+	width: 100px;
 }
 .iwant #pan-wrap #pan .pan-text #pan-text1{
 	-webkit-transform: rotate(90deg);
@@ -427,12 +434,12 @@ input[type='range']::-webkit-slider-thumb {
 
 .iwant #pan-list-back{
 	position: absolute;
-	left: 50%;
+	left: 60%;
 	top: 0px;
 	margin-left: -49px;
 	width: 60px;
 	height: 100%;
-	background: url(/static/images/border2.png) left center no-repeat;
+	background: url(../images/border2.png) left center no-repeat;
 }
 
 .iwant .pin-top{
@@ -449,9 +456,9 @@ input[type='range']::-webkit-slider-thumb {
 
 .iwant #pan-list{
 	position: absolute;
-	left: 50%;
+	left: 60%;
 	top: 0px;
-	width: 50%;
+	width: 40%;
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#D0D0D0), color-stop(0.1, #D0D0D0), color-stop(0.5, #EEEEEE),  color-stop(0.9, #D0D0D0), to(#D0D0D0)); 
 	z-index: 22;
 
@@ -465,7 +472,7 @@ input[type='range']::-webkit-slider-thumb {
 	line-height: 70px;
 	text-align: center;
 	border-top: 1px #b8b8b8 solid;
-	font-size: 20px;
+	font-size: 16px;
 	cursor: pointer;
 }
 .iwant #pan-list ul li:first-child{
@@ -548,9 +555,9 @@ input[type='range']::-webkit-slider-thumb {
 
 /* Radial ------------------------- */
 .radial.metal {
-	width: 500px;
-	height: 500px;
-	line-height: 500px;
+	width: 240px;
+	height: 240px;
+	line-height: 240px;
 	border-radius: 100%;
 	background-image: -webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
     -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
@@ -781,7 +788,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .mine .top{
-	background: url(/static/images/ming-bg.jpg) center 10% no-repeat;
+	background: url(../images/ming-bg.jpg) center 10% no-repeat;
 	height: 120px;
 	color: #fff;
 }
@@ -805,7 +812,7 @@ input[type='range']::-webkit-slider-thumb {
 	vertical-align: middle;
 }
 .mine .more{
-	font-size: 80px;
+	font-size: 60px;
 	line-height: 120px;
 	color: #e0e0e0;
 }
@@ -829,10 +836,10 @@ input[type='range']::-webkit-slider-thumb {
 	background-color: #f5f5f5;
 }
 .mine .row-item .more{
-	font-size: 30px;
+	font-size: 16px;
 	color: #e0e0e0;
 	line-height: 40px;
-	text-align: right;
+	text-align: center;
 }
 
 .order .top{

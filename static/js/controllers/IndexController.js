@@ -1,5 +1,6 @@
 app.controller('IndexController', function(){
 	var scope = this;
+
 	
 	var swiper = new Swiper('.swiper-container', {
         spaceBetween: 0,
@@ -9,7 +10,4 @@ app.controller('IndexController', function(){
     });
 
 
-	$('.search-box input').on('focus', function(){
-
-	});
 });
