@@ -1,9 +1,4 @@
 app.controller('SendOrderController', function(){
-	var wh = $(window).height()-40;
-	if(wh > $('body').height()){
-		$('body').height(wh);
-	}
-	$('.app-body').height(wh);
 
 	var percent = 0;
 
@@ -26,7 +21,13 @@ app.controller('SendOrderController', function(){
 			$('.rule').width($('.price').width()-4);
 
 			setTimeout(function(){
-				app.redirect('/order-choose')
+				if(location.hash != '#/send-order'){
+					var type = location.hash.split('-');
+					app.redirect('/order-choose-'+ type[type.length-1]);
+				} else {
+					app.redirect('/order-choose');
+				}
+				
 			}, 2000);
 		}
 	}

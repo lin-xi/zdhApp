@@ -1,0 +1,81 @@
+<div class="order-template">
+	<div class="row">
+		<div class="col-12"><span class="num">1</span>距离</div>
+	</div>
+	<div class="row">
+		<div class="col-12 p-10">
+			<input class="distance" type="range" min="0" max="20" step="1" value="1"/>
+			<br>
+			<span class="distance-text">1</span>公里
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-12"><span class="num">2</span>技能类型</div>
+	</div>
+	<div class="row tag">
+		<div class="col-12 p-10">
+			<code>挖掘机</code><code>叉车</code><code>电气焊</code><code>烹饪</code><code>美容美发</code>
+		</div>
+	</div>
+	
+
+	<div class="row">
+		<div class="col-12 text-center">
+			<button id="orderOk" class="btn-primary">确定</button>
+			<button id="orderCancel" class="btn-default">返回</button>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$('.order-template .distance').on('change', function (e) {
+		if($(this).val() != 0){
+			$('.order-template .distance-text').text($(this).val());
+		} else {
+			$('.order-template .distance-text').text("不限");
+		}
+	});
+
+	$('.order-template .price').on('change', function (e) {
+		if($(this).val() != 0){
+			$('.order-template .price-text').text($(this).val());
+		} else {
+			$('.order-template .price-text').text("不限");
+		}
+	});
+
+	$('.order-template .number-minus').on('click', function (e) {
+		var v = $('.order-template .number').val();
+		--v;
+		var min = $('.order-template .number').attr('min') - 0;
+		if(v < min){
+			$('.order-template .number').val(min);
+		} else {
+			$('.order-template .number').val(v);
+		}
+		e.preventDefault();
+		e.stopPropagation();
+	});
+
+	$('.order-template .number-plus').on('click', function (e) {
+		var v = $('.order-template .number').val();
+		++v;
+		$('.order-template .number').val(v);
+		e.preventDefault();
+		e.stopPropagation();
+	});
+
+	$('.order-template code').on('click', function (e) {
+		var checked = $(this).data('checked') | false;
+		checked = !checked;
+		if(checked){
+			$(this).addClass('checked');
+		}else{
+			$(this).removeClass('checked');
+		}
+		$(this).data('checked', checked);
+	});
+</script>

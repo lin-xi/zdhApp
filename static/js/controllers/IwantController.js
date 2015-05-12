@@ -4,12 +4,9 @@ app.controller('IwantController', function(){
 	var index = 0;
 	var angel = 0;
 
-	var wh = $(window).height()-40;
-	if(wh > $('body').height()){
-		$('body').height(wh);
-	}
-	$('.app-body').height(wh);
-	$('#pan-wrap').height(wh-40);
+	var wh = $(window).height()-80;
+
+	$('#pan-wrap').height(wh);
 	$('#order-view').height(wh);
 
 
@@ -23,34 +20,38 @@ app.controller('IwantController', function(){
 		buildList();
 
 		var hander;
-	    $('#pan .pan-text').on('swipeUp', function(e){
-	    	if(hander){
-	    		clearTimeout(hander);
-	    	}
-	    	hander = setTimeout(function(){
-	    		--index;
-	    		angel -= 36;
+		$("#pan .pan-text").swipe({
+        	swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+	          	if(direction == 'up'){
+	          		if(hander){
+			    		clearTimeout(hander);
+			    	}
+			    	hander = setTimeout(function(){
+			    		--index;
+			    		angel -= 36;
 
-	    		if(index<0){
-	    			index = 9;
-	    		}
-	    		handlerRotate();
-	    	}, 300);
-	    });
-
-	    $('#pan .pan-text').on('swipeDown', function(e){
-	    	if(hander){
-	    		clearTimeout(hander);
-	    	}
-	    	hander = setTimeout(function(){
-	    		++index;
-	    		angel += 36;
-	    		if(index == 10){
-	    			index = 0;
-	    		}
-	    		handlerRotate();
-	    	}, 300);
-	    });
+			    		if(index<0){
+			    			index = 9;
+			    		}
+			    		handlerRotate();
+			    	}, 200);
+	          	} else if(direction == 'down') {
+	          		if(hander){
+			    		clearTimeout(hander);
+			    	}
+			    	hander = setTimeout(function(){
+			    		++index;
+			    		angel += 36;
+			    		if(index == 10){
+			    			index = 0;
+			    		}
+			    		handlerRotate();
+			    	}, 200);
+	          	}
+	        },
+        	//Default is 75px, set to 0 for demo so any distance triggers swipe
+         	threshold: 0
+      	});
 
 	    function handlerRotate(){
 	    	$('#pan .pan-text .active').removeClass('active');
@@ -77,8 +78,8 @@ app.controller('IwantController', function(){
 		panlist.html(htmls.join(''));
 
 		panlist.appendTo($('#pan-wrap'));
-		panlist.height(wh-40);
-		var count = Math.floor((wh-40)/70);
+		panlist.height(wh);
+		var count = Math.floor(wh/60);
 		// if(panlist.height() > wh){
 		// 	panlist.css('top', 0);
 		// } else {
@@ -104,20 +105,15 @@ app.controller('IwantController', function(){
 				ov.css('left', w-60);
 			}, 0);
 			
-
 			setTimeout(function(){
-				pw.css({left: -w+260});
-				ov.css({left: 200});
+				pw.css({left: -(w*0.7)});
+				ov.css({left: w*0.3});
 			}, 1000);
 
 			var idx = cur.attr('index');
 			var tpl = list[idx].template;
 			$.get('static/js/views/template/'+ tpl + '?t=' + new Date(), function(text){
 				ov.html(text);
-
-				$('#orderOk').on('click', function(){
-					app.redirect('/send-order');
-				});
 
 				$('#orderCancel').on('click', function(){
 					$('#pan-wrap').css({left: 0});

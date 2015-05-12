@@ -58,44 +58,44 @@
 			]
 		},
 		{
-			"name": "玩",
+			"name": "娱乐",
 			"icon": "icon-glass2",
 			"catalog": "A00001",
 			"list": [
 				{
 					"name": "KTV",
 					"catalog": "A0000100001",
-					"template": "tpl01.html"
+					"template": "tpl001.html"
 				},
 				{
 					"name": "夜总会",
 					"catalog": "A0000100002",
-					"template": "tpl01.html"
+					"template": "tpl001.html"
 				},
 				{
 					"name": "酒吧",
 					"catalog": "A0000100003",
-					"template": "tpl01.html"
+					"template": "tpl02.html"
 				},
 				{
 					"name": "咖啡厅",
 					"catalog": "A0000100004",
-					"template": "tpl01.html"
+					"template": "tpl02.html"
 				},
 				{
 					"name": "洗浴",
 					"catalog": "A0000100005",
-					"template": "tpl01.html"
+					"template": "tpl03.html"
 				},
 				{
 					"name": "按摩",
 					"catalog": "A0000100006",
-					"template": "tpl01.html"
+					"template": "tpl001.html"
 				},
 				{
 					"name": "足浴",
 					"catalog": "A0000100007",
-					"template": "tpl01.html"
+					"template": "tpl001.html"
 				}
 			]
 		},
@@ -107,42 +107,42 @@
 				{
 					"name": "电影票",
 					"catalog": "B000000011",
-					"template": "tpl01.html"
+					"template": "tpl04.html"
 				},
 				{
 					"name": "彩票",
 					"catalog": "B000000012",
-					"template": "tpl01.html"
+					"template": "tpl05.html"
 				},
 				{
 					"name": "机票",
 					"catalog": "B000000013",
-					"template": "tpl01.html"
+					"template": "tpl06.html"
 				},
 				{
 					"name": "汽车票",
 					"catalog": "B000000014",
-					"template": "tpl01.html"
+					"template": "tpl06.html"
 				},
 				{
 					"name": "话剧票",
 					"catalog": "B000000015",
-					"template": "tpl01.html"
+					"template": "tpl07.html"
 				},
 				{
 					"name": "演唱会门票",
 					"catalog": "B000000016",
-					"template": "tpl01.html"
+					"template": "tpl08.html"
 				},
 				{
 					"name": "音乐会门票",
 					"catalog": "B000000017",
-					"template": "tpl01.html"
+					"template": "tpl09.html"
 				},
 				{
 					"name": "景点门票",
 					"catalog": "B000000018",
-					"template": "tpl01.html"
+					"template": "tpl10.html"
 				}
 			]
 		},
@@ -154,22 +154,22 @@
 				{
 					"name": "美发",
 					"catalog": "A0000100001",
-					"template": "tpl01.html"
+					"template": "tpl11.html"
 				},
 				{
 					"name": "美容",
 					"catalog": "A0000100002",
-					"template": "tpl01.html"
+					"template": "tpl12.html"
 				},
 				{
 					"name": "美甲",
 					"catalog": "A0000100003",
-					"template": "tpl01.html"
+					"template": "tpl12.html"
 				},
 				{
 					"name": "养生spa",
 					"catalog": "A0000100004",
-					"template": "tpl01.html"
+					"template": "tpl12.html"
 				}
 			]
 		},
@@ -181,27 +181,27 @@
 				{
 					"name": "酒店",
 					"catalog": "A0000100001",
-					"template": "tpl01.html"
+					"template": "tpl13.html"
 				},
 				{
 					"name": "度假村",
 					"catalog": "A0000100001",
-					"template": "tpl01.html"
+					"template": "tpl13.html"
 				},
 				{
 					"name": "农家院",
 					"catalog": "A0000100001",
-					"template": "tpl01.html"
+					"template": "tpl13.html"
 				},
 				{
 					"name": "机票",
 					"catalog": "B000000013",
-					"template": "tpl01.html"
+					"template": "tpl06.html"
 				},
 				{
 					"name": "景点门票",
 					"catalog": "B000000018",
-					"template": "tpl01.html"
+					"template": "tpl10.html"
 				}
 			]
 		},
@@ -213,22 +213,22 @@
 				{
 					"name": "健身房",
 					"catalog": "A0000100001",
-					"template": "tpl01.html"
+					"template": "tpl14.html"
 				},
 				{
 					"name": "篮球馆",
 					"catalog": "A0000100002",
-					"template": "tpl01.html"
+					"template": "tpl15.html"
 				},
 				{
 					"name": "羽毛球馆",
 					"catalog": "A0000100003",
-					"template": "tpl01.html"
+					"template": "tpl15.html"
 				},
 				{
 					"name": "游泳馆",
 					"catalog": "A0000100004",
-					"template": "tpl01.html"
+					"template": "tpl15.html"
 				}
 			]
 		},
@@ -238,24 +238,29 @@
 			"catalog": "A00001",
 			"list": [
 				{
+					"name": "搬家",
+					"catalog": "A0000100003",
+					"template": "tpl16.html"
+				},
+				{
 					"name": "保洁",
 					"catalog": "A0000100001",
-					"template": "tpl01.html"
+					"template": "tpl18.html"
+				},
+				{
+					"name": "干洗",
+					"catalog": "A0000100001",
+					"template": "tpl18.html"
 				},
 				{
 					"name": "桶装水",
 					"catalog": "A0000100002",
-					"template": "tpl01.html"
+					"template": "tpl17.html"
 				},
 				{
-					"name": "维修家电",
+					"name": "维修",
 					"catalog": "A0000100003",
-					"template": "tpl01.html"
-				},
-				{
-					"name": "东南亚料理",
-					"catalog": "A0000100010",
-					"template": "tpl01.html"
+					"template": "tpl19.html"
 				}
 			]
 		},
@@ -267,17 +272,17 @@
 				{
 					"name": "洗车",
 					"catalog": "A0000100001",
-					"template": "tpl01.html"
+					"template": "tpl12.html"
 				},
 				{
 					"name": "修车",
 					"catalog": "A0000100002",
-					"template": "tpl01.html"
+					"template": "tpl12.html"
 				},
 				{
 					"name": "汽车美容",
 					"catalog": "A0000100003",
-					"template": "tpl01.html"
+					"template": "tpl12.html"
 				}
 			]
 		},
@@ -289,32 +294,44 @@
 				{
 					"name": "技能培训",
 					"catalog": "A0000100001",
-					"template": "tpl01.html"
+					"template": "tpl20.html"
 				},
 				{
 					"name": "技术培训",
 					"catalog": "A0000100002",
-					"template": "tpl01.html"
+					"template": "tpl21.html"
 				},
 				{
 					"name": "语言培训",
 					"catalog": "A0000100003",
-					"template": "tpl01.html"
+					"template": "tpl21.html"
 				},
 				{
 					"name": "职业培训",
 					"catalog": "A0000100004",
-					"template": "tpl01.html"
+					"template": "tpl21.html"
 				},
 				{
 					"name": "考试培训",
 					"catalog": "A0000100005",
-					"template": "tpl01.html"
+					"template": "tpl22.html"
 				},
 				{
 					"name": "体育培训",
 					"catalog": "A0000100006",
-					"template": "tpl01.html"
+					"template": "tpl22.html"
+				}
+			]
+		},
+		{
+			"name": "快递",
+			"icon": "icon-school",
+			"catalog": "A00001",
+			"list": [
+				{
+					"name": "发快递",
+					"catalog": "A0000100001",
+					"template": "tpl22.html"
 				}
 			]
 		}

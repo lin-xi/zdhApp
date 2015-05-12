@@ -1,0 +1,87 @@
+<div class="order-template">
+	<div class="row">
+		<div class="col-12"><span class="num">1</span>随机</div>
+	</div>
+	<div class="row">
+		随机号码
+		<br>
+		<br>
+	</div>
+
+	<div class="row">
+		<div class="col-12"><span class="num">2</span>指定号码</div>
+	</div>
+	<div class="row tag">
+		<code>2</code>
+		<code>4</code>
+		<code>6</code>
+		<code>13</code>
+		<code>7</code>
+		<code>9</code>
+		<code class="checked">11</code>
+
+		<br>
+		<br>
+	</div>
+	
+
+	<div class="row">
+		<div class="col-12 text-center">
+			<a href="#/send-order-cp">
+			<button id="orderOk" class="btn-primary">确定</button>
+			</a>
+			<button id="orderCancel" class="btn-default">返回</button>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$('.order-template .distance').on('change', function (e) {
+		if($(this).val() != 0){
+			$('.order-template .distance-text').text($(this).val());
+		} else {
+			$('.order-template .distance-text').text("不限");
+		}
+	});
+
+	$('.order-template .price').on('change', function (e) {
+		if($(this).val() != 0){
+			$('.order-template .price-text').text($(this).val());
+		} else {
+			$('.order-template .price-text').text("不限");
+		}
+	});
+
+	$('.order-template .number-minus').on('click', function (e) {
+		var v = $('.order-template .number').val();
+		--v;
+		var min = $('.order-template .number').attr('min') - 0;
+		if(v < min){
+			$('.order-template .number').val(min);
+		} else {
+			$('.order-template .number').val(v);
+		}
+		e.preventDefault();
+		e.stopPropagation();
+	});
+
+	$('.order-template .number-plus').on('click', function (e) {
+		var v = $('.order-template .number').val();
+		++v;
+		$('.order-template .number').val(v);
+		e.preventDefault();
+		e.stopPropagation();
+	});
+
+	$('.order-template code').on('click', function (e) {
+		var checked = $(this).data('checked') | false;
+		checked = !checked;
+		if(checked){
+			$(this).addClass('checked');
+		}else{
+			$(this).removeClass('checked');
+		}
+		$(this).data('checked', checked);
+	});
+</script>

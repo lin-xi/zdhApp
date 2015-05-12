@@ -1,8 +1,13 @@
 app.controller('OrderChooseController', function(){
-	var wh = $(window).height()-40;
-	if(wh > $('body').height()){
-		$('body').height(wh);
-	}
-	$('.app-body').height(wh);
-	
+
+	$('.menu').on('click', function(e){
+		$('.top-menu').show();
+
+		e.preventDefault();
+		e.stopPropagation();
+	});
+
+	$('body').on('click', function(){
+		$('.top-menu').hide();
+	});
 });

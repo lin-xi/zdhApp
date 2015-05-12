@@ -1,0 +1,107 @@
+<div class="order-template">
+	
+	<div class="row">
+		<div class="col-12"><span class="num">1</span>目的地</div>
+	</div>
+	<div class="row tag">
+		<div class="col-12 p-10">
+			<code>广州番禺区</code>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12"><span class="num">2</span>净重</div>
+	</div>
+	<div class="row tag">
+		<div class="col-12 p-10">
+			<code><1kg</code><code>1kg-2kg</code>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12"><span class="num">3</span>时间</div>
+	</div>
+	<div class="row date-input tag">
+		<div class="col-12 p-10">
+			<div class="year">
+				<a class="number-plus">+</a>
+				<input type="text" readonly="true" min="2015" value="2015"/>
+				<a class="number-minus">－</a>
+			</div>
+			<div class="month">
+				<a class="number-plus">+</a>
+				<input type="text" readonly="true" min="1" value="4"/>
+				<a class="number-minus">－</a>
+			</div>
+			<div class="day">
+				<a class="number-plus">+</a>
+				<input type="text" readonly="true" min="1" value="12"/>
+				<a class="number-minus">－</a>
+			</div>
+
+			<br><br>
+			<code>13:00-15:00</code>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-12 text-center">
+			<a href="#/send-order-kd">
+			<button id="orderOk" class="btn-primary">确定</button>
+			</a>
+			<button id="orderCancel" class="btn-default">返回</button>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$('.order-template .distance').on('change', function (e) {
+		if($(this).val() != 0){
+			$('.order-template .distance-text').text($(this).val());
+		} else {
+			$('.order-template .distance-text').text("不限");
+		}
+	});
+
+	$('.order-template .price').on('change', function (e) {
+		if($(this).val() != 0){
+			$('.order-template .price-text').text($(this).val());
+		} else {
+			$('.order-template .price-text').text("不限");
+		}
+	});
+
+	$('.order-template .number-minus').on('click', function (e) {
+		var v = $('.order-template .number').val();
+		--v;
+		var min = $('.order-template .number').attr('min') - 0;
+		if(v < min){
+			$('.order-template .number').val(min);
+		} else {
+			$('.order-template .number').val(v);
+		}
+		e.preventDefault();
+		e.stopPropagation();
+	});
+
+	$('.order-template .number-plus').on('click', function (e) {
+		var v = $('.order-template .number').val();
+		++v;
+		$('.order-template .number').val(v);
+		e.preventDefault();
+		e.stopPropagation();
+	});
+
+	$('.order-template code').on('click', function (e) {
+		var checked = $(this).data('checked') | false;
+		checked = !checked;
+		if(checked){
+			$(this).addClass('checked');
+		}else{
+			$(this).removeClass('checked');
+		}
+		$(this).data('checked', checked);
+	});
+</script>
